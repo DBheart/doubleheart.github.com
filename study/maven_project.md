@@ -1,17 +1,17 @@
 [maven project create](http://jaesu.tistory.com/entry/Maven-web-project-%EB%A7%8C%EB%93%A4%EA%B8%B0)
 
-1. eclipse project 설정
-    - 프로젝트 인코딩 변경 : UTF-8
-    - Deployment Assembly : MavenDependencies를 확인
-    - Java Build Path : 자바버전
-2. 서블릿 버전 수정
-    - "web.xml" update
-      - [블릿 버전별 web.xml](http://antop.tistory.com/145)
-    - Project Facets : 자바버전, 서블릿 버전
-      - 서블릿 버전은 이크립스 설정파일을 수정해야한다.
-      - /setting/org.eclipse.wst.common.project.facet.core.xml
-      - 윈도우는 바로 이동할수 있는 Resource에서 클릭하여서 프로젝트 폴더로 이동할수 있다.
-      - 다 한뒤에 maven update
+1. eclipse project : setting
+    # 프로젝트 인코딩 변경 : UTF-8
+    # Deployment Assembly : "MavenDependencies" check
+    # Java Build Path : jdk version
+2. servlet version : update
+    # "web.xml" update
+      - [servlet version - web.xml](http://antop.tistory.com/145)
+    # Project Facets : jdk version, servlet version
+      ## The servlet version must modify the following eclipse configuration file:
+      ### /setting/org.eclipse.wst.common.project.facet.core.xml
+      ## The window can be moved to the project folder directly by clicking on the resource.
+      ## maven update
 3. pom.xml 수정
     - name명 수정 : 수정안하면 project 를 톰캣에 추가할때 contex가 이상하게 들어간다.
     - properties 추가 : jdk버전, project_name, build encoding, report encoding
