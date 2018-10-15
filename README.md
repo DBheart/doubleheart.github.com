@@ -1,7 +1,7 @@
 # Maven Project
 
 
-* [Git Hub Page edit](https://https://dbheart.github.io/blog/ref/github.md)
+* [Git Hub Page edit](https://https://dbheart.github.io/blog/ref/github_page.md)
 
 ---
 
