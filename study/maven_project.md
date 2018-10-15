@@ -14,7 +14,8 @@
       >> maven update
 3. "pom.xml" Update
     > name Updadte : 수정안하면 project 를 톰캣에 추가할때 contex가 이상하게 들어간다.
-    > properties Add : jdk버전, project_name, build encoding, report encoding
+    > properties Add
+    >> jdk version, project_name, build encoding, report encoding
     > build plugin Add : 프로젝트에서 오른쪽키 > Maven > Add Plugn
 4. "tomcat" run : http://localhost:9090/context_name
     > port Update
