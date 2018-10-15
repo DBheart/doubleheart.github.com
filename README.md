@@ -1,4 +1,4 @@
-# [Maven Project](https://dbheart.github.io/blog/news/mavenProject.md)
+# [Maven Project](https://dbheart.github.io/blog/news/maven_project.md)
 
 
 * [Git Hub Page edit](https://https://dbheart.github.io/blog/ref/github_page.md)
