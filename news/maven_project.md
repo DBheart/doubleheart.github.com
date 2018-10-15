@@ -18,10 +18,10 @@
 
 서블릿 3.1의 web.xml 설정
 Servlet 3.1
----------------------------------------------------------------------------------------------------------------
-| <web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+```
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" 
 	version="3.1"> 
-</web-app> |
----------------------------------------------------------------------------------------------------------------
-      
+</web-app>
+```
+   
