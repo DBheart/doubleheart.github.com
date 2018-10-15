@@ -17,6 +17,8 @@
     - properties 추가 : jdk버전, project_name, build encoding, report encoding
     - 빌드 플러그인 추가 : 프로젝트에서 오른쪽키 > Maven > Add Plugn
 4. 톰캣 띄워서 되는지 보기 : http://localhost:9090/컨택스명
+    - port 수정
+    - context name 수정
 
 ---
 
