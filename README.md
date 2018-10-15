@@ -5,6 +5,6 @@
 
 ---
 
-* [Git Hub Page edit](https://https://dbheart.github.io/blog/ref/github_page.md)
+* [Git Hub Page edit](https://dbheart.github.io/blog/ref/github_page.md)
 
 
