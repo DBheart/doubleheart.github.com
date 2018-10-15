@@ -11,7 +11,10 @@
       - 서블릿 버전은 이크립스 설정파일을 수정해야한다.
       - /setting/org.eclipse.wst.common.project.facet.core.xml
       - 윈도우는 바로 이동할수 있는 Resource에서 클릭하여서 프로젝트 폴더로 이동할수 있다.
-3. 톰캣 띄워서 되는지 보기 : http://localhost:9090/컨택스명
+      - 다 한뒤에 maven update
+3. pom.xml 수정
+    - name명 수정
+4. 톰캣 띄워서 되는지 보기 : http://localhost:9090/컨택스명
 
 ---
 
