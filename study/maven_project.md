@@ -1,3 +1,8 @@
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>	
+
 [maven project create](http://jaesu.tistory.com/entry/Maven-web-project-%EB%A7%8C%EB%93%A4%EA%B8%B0)
 
 1. eclipse project - setting
