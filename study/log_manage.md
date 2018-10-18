@@ -25,6 +25,43 @@ api라이브러리는 크게 3개로 나누면 될것같다.
 > log4j2: log4j2.properties, log4j2.xml
 > logback:logback.xml ( 프로퍼티파일도 있을란가? 부트스트랩에서는 로그 파일없어도 잘돌아가는 것같다)
 
+log4j.xml
+```
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration debug="true">
+	<appender name="DAILYLOG"
+		class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="logs/log4j1/demo.log" />
+		<param name="Append" value="true" />
+		<!-- Rollover at midnight each day -->
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.EnhancedPatternLayout">
+			<param name="ConversionPattern"
+				value="%d{yyyy-MM-dd'T'HH:mm:ss.SSSZZZ} llevel=%-5p, lthread_id='%t',lclass=%C{2.}.%L,lmethod=%M %m%n" />
+		</layout>
+	</appender>
+	<appender name="CONSOLE"
+		class="org.apache.log4j.ConsoleAppender">
+		<param name="Target" value="System.out" />
+		<layout class="org.apache.log4j.EnhancedPatternLayout">
+			<param name="ConversionPattern"
+				value="%d{yyyy-MM-dd'T'HH:mm:ss.SSSZZZ} llevel=%-5p, lthread_id='%t',lclass=%C{2.}.%L,lmethod=%M %m%n" />
+		</layout>
+	</appender>
+
+	<logger name="kr.pe.deity">
+		<level value="DEBUG" />
+	</logger>
+
+	<root>
+		<priority value="DEBUG" />
+		<appender-ref ref="DAILYLOG" />
+		<appender-ref ref="CONSOLE" />
+	</root>
+</log4j:configuration>
+```
+
 
 확인사항
 > 톰캣로그와 중복으로 남는지 확인
