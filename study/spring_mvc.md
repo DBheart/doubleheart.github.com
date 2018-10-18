@@ -1,3 +1,7 @@
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>	
+
 spring web mvc
 
 1. pom.xml 수정 : 디펜던시 추가
