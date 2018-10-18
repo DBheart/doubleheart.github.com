@@ -8,7 +8,7 @@ api라이브러리는 크게 3개로 나누면 될것같다.
     > logback
     > log4j2 
 
-여기서는 log4j2를 써보도록 하겠다.
+여기서는 log4j를 써보도록 하겠다.(log4j2를 쓴것같은데 아닌가 보다 ㅎㅎㅎlog4j.xml을 참조하네?
 
 # 설치사항
 ## maven에서 logback을 설치하면  slf4j가 설치된다.
