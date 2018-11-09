@@ -25,7 +25,7 @@ api라이브러리는 크게 3개로 나누면 될것같다.
 > log4j2: log4j2.properties, log4j2.xml
 > logback:logback.xml ( 프로퍼티파일도 있을란가? 부트스트랩에서는 로그 파일없어도 잘돌아가는 것같다)
 
-log4j.xml
+1. log4j.xml
 ```
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
@@ -61,11 +61,69 @@ log4j.xml
 	</root>
 </log4j:configuration>
 ```
+2. logback.xml
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml" />
+    <include resource="org/springframework/boot/logging/logback/console-appender.xml" />    
 
+    <!-- 변수 지정 -->
+    <property name="LOG_DIR" value="../logs" />
+    <property name="LOG_PATH_NAME" value="${LOG_DIR}/data.log" />
 
-확인사항
+    <!-- FILE Appender -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_PATH_NAME}</file>
+        <!-- 일자별로 로그파일 적용하기 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH_NAME}.%d{yyyyMMdd}</fileNamePattern>
+            <maxHistory>60</maxHistory> <!-- 일자별 백업파일의 보관기간 -->
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%-5p] [%F]%M\(%L\) : %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+      <layout class="ch.qos.logback.classic.PatternLayout">
+        <pattern>%d{yyyy-MM-dd HH:mm:ss} [%-5p] [%F]%M\(%L\) : %m%n</pattern>
+      </layout>
+    </appender>
+
+    <root level="DEBUG">
+        <appender-ref ref="FILE" />
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>
+```
+
+logback에 대한사항
+0. 설치사항
+> logback-classic : STS에서 add로는 안보인다. 메이븐 레파지토리 웹에서 찾아서 넣자.
+>> scope가 test로 되어있으므로 수정하자.
+> logback-access : STS에서 add로 찾아서 설치
+> log4j-over-slf4j : STS에서 add로 찾아서 설치
+
+1. 로그연관 api
+> log4jdbc-log4j2 : DB의 쿼리를 정렬해서 보여준다. 
+>> 내가 알기로는 DB쿼리를 보여주고 결과까지 보여주는 api가 있었던거 같은데...
+> log4j-over-slf4j : log4j로그를 slf4j로 전환해준다. 
+>> 스프링로그가 log4j로 전환되어서 나오는데 이 라이브러리를 안쓰면 안나오게 된다.
+
+2. 로그백 클래스 분석
+> logback-core : 로그백 핵심 코어
+> logback-classic : 핵심코어 컴포넌트
+> logback-access : 웹어플리케이션에서 http 디버깅이 가능하게 한다. 어떻게?
+
+확인사항(확인완료)
 > 톰캣로그와 중복으로 남는지 확인
-> 어떻게 확인하지? 로컬에서는 안되는것 같고... 로컬 톰캣에 해봐야하나.. ㅃ
+>> 톰캣로그와 로그는 별개로 남는다.
+>> 톰캣로그를 없앨려면은 톰캣에서 안남게 따로 설정하자.
+>> System.out.println는 톰캣로그에만 남는다.
+> 로컬에 톰캣을 설치해서 확인하자. 
+>> 배포가 되는지 확인. 현재는 war로 배포했다. 나중에는 아마존같은곳에 배포해보자.
+> DB로그 확인필요
 
 
 이후 조절할 것들
