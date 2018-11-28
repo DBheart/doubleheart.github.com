@@ -66,6 +66,7 @@ api라이브러리는 크게 3개로 나누면 될것같다.
 2. logback.xml
 ```
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration>
 <configuration>
     <include resource="org/springframework/boot/logging/logback/defaults.xml" />
     <include resource="org/springframework/boot/logging/logback/console-appender.xml" />    
