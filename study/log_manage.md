@@ -13,6 +13,7 @@ api라이브러리는 크게 3개로 나누면 될것같다.
 # 설치사항
 ## maven에서 logback을 설치하면  slf4j가 설치된다.
 ### logback-classic
+### https://github.com/sonegy/how-to-use-logback
 ## log4j와 log4j2는 slf4j 라이브러리를 설치하고 log4j api와 log4j2 api 중에서 맞는것을 설치해야한다.
 ## [설치 참조](https://examples.javacodegeeks.com/enterprise-java/logback/logback-vs-log4j-example/)
 
