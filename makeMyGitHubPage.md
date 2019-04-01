@@ -32,7 +32,7 @@ GITHUB page로 블로그 만들기
 ```
 
 기타
-# 마크다운 문법 : https://gist.github.com/ihoneymon/652be052a0727ad59601
-# 켈리 테마 : https://github.com/topics/jekyll-theme
-# 나의 깃허브 블로그 주소 : https://dbheart.github.io/blog/
-# [Git Hub Page edit](./ref/github_page.md)
+# [마크다운 문법](https://gist.github.com/ihoneymon/652be052a0727ad59601)
+## [Git Hub Page edit-english](./ref/github_page.md)
+# [켈리 테마](https://github.com/topics/jekyll-theme)
+# [나의 깃허브 블로그 주소](https://dbheart.github.io/blog/)
