@@ -14,6 +14,4 @@ IJ로 스프링5.X대의 스프링부트2.X버전 설치하기.
 
 ---
 
-* [Git Hub Page edit](./ref/github_page.md)
-
-
+* [깃허브 페이지 만들기](makeMyGitHubPage.md)
