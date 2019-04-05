@@ -69,3 +69,6 @@ full request가 통과된 소스는(remote merge) 개발서버에 적용되고(C
 ---
 
 * [깃허브 페이지 만들기](makeMyGitHubPage.md)
+* [깃 심플한 기초](https://rogerdudler.github.io/git-guide/index.ko.html)
+
+* [깃허브 프로젝트관리](https://cheese10yun.github.io/github-proejct/)
