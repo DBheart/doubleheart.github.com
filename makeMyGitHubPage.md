@@ -1,21 +1,8 @@
 # GITHUB page로 블로그 만들기 
 > 아 복잡할것 같았는데 그렇게 복잡하지 않네.
 >> 저번에 봤을때는 루비로 만들고 몬가를 막했었던거 같은데 너무 복잡하게 생각한거 같다.
-
-# 켈리(테마)적용하기
->켈리 테마를 적용하는 방법은 3가지 정도로 압축되는 듯 하다.
->> 나는 어떻게 했는지 기억이 안난다. 이것저것 껴맞추다보니 어쩌다 되었다.
->> 심화가 아니면 그냥 github 설정에서 테마적용하는 것으로 끝내도록하자. 
->> 켈리사이트에서 루비에서 변환하고 하는데 하지 말것을 추천한다. 
->> 켈리사이트에서도 밑에 github에서는 따로 하는 가이드를 소개하고 있다.
-1. [github 설정에서 테마 적용](https://help.github.com/en/articles/adding-a-jekyll-theme-to-your-github-pages-site-with-the-jekyll-theme-chooser)
-    - '_config.yml'파일에 theme:테마로 되어있다.
-2. 테마 레파지토리를 다운로드 받아서 만들기
-    - [깃허브 가이드](https://pages.github.com/)
-    - [켈리 repository](https://github.com/topics/jekyll-theme)
-3. 켈리사이트에서 소개하는 방법    
-    - [켈리 사이트](https://jekyllrb.com/)
-    - 깃허브에서 적용할때는 이렇게까지는 필요없는 것 같다.
+1. 설정에서 gitpage쓴다고 체크만 하면 되는걸로 알고 있다. 참~ 쉽다.
+   1. 설정의 GitHub Pages에서 사용할 branch를 선택하고, 켈리 테마를 선택하면 끝~ 일것이다. (어떻게 만들었는지 생각이 안난다.)
 
 # github를 블로그로 쓰기
 1. 언어는 마크다운 언어를 쓴다.
@@ -41,7 +28,7 @@
 > git status : 상태 확인하기, 중간중간 살펴보기로 한다.
 ```
 
-# 비주얼코드 사용한 유지보수
+# 비주얼코드로 마크다운 수정
 - [비주얼코드로 markdown사용하는 방법](https://blog.aliencube.org/ko/2016/07/06/markdown-in-visual-studio-code/)
 - 'markdown extension pack'이라는 익스텐션이 있는데 설치해서 사용하자. markdown에 필요한 플러그인을 통합적으로 설치해주는 것 같다.
   - 와 markdownlint는 쓰지말자. 설치했다가 물결표시가 장난 아니다. 통합팩에서 다지우고 'all in one', 'emoji','pdf'만 남기고 다 언인스톨했다.
@@ -56,12 +43,25 @@
 * 아쉬우니까 plant uml에대해서 따로 이야기 해야 할 것 같다.
 * 비주얼 코드에 대해서 도 알아보자 : https://gomcine.tistory.com/entry/VS-Code-Extension-%EC%84%A4%EC%B9%98-%EB%B0%8F-%EC%9C%A0%EC%9A%A9%ED%95%9C-Extension-%EC%86%8C%EA%B0%9C
 
-
 @startuml
 Bob -> Alice : hello
 Alice ->Bob : ok
 @enduml
 
+# 켈리(테마)적용하기
+>켈리 테마를 적용하는 방법은 3가지 정도로 압축되는 듯 하다.
+>> 나는 어떻게 했는지 기억이 안난다. 이것저것 껴맞추다보니 어쩌다 되었다.
+>> 심화가 아니면 그냥 github 설정에서 테마적용하는 것으로 끝내도록하자. 
+>> 켈리사이트에서 루비쓰는게 있는데 하지말자.
+>>> 켈리사이트에서도 github에서는 따로 하는 가이드를 소개하고 있다.
+1. [github 설정에서 테마 적용](https://help.github.com/en/articles/adding-a-jekyll-theme-to-your-github-pages-site-with-the-jekyll-theme-chooser)
+    - '_config.yml'파일에 theme:테마로 되어있다.
+2. 테마 레파지토리를 다운로드 받아서 만들기
+    - [깃허브 가이드](https://pages.github.com/)
+    - [켈리 repository](https://github.com/topics/jekyll-theme)
+3. 켈리사이트에서 소개하는 방법    
+    - [켈리 사이트](https://jekyllrb.com/)
+    - 깃허브에서 적용할때는 이렇게까지는 필요없는 것 같다.
 
 # 기타
 ## [마크다운 문법](https://guides.github.com/features/mastering-markdown/)
