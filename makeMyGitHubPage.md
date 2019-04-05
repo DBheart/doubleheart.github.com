@@ -46,10 +46,20 @@
 - 'markdown extension pack'이라는 익스텐션이 있는데 설치해서 사용하자. markdown에 필요한 플러그인을 통합적으로 설치해주는 것 같다.
 - 와 markdownlint는 쓰지말자. 설치했다가 물결표시가 장난 아니다. 통합팩에서 다지우고 'all in one', 'emoji','pdf'만 남기고 다 언인스톨했다.
 - pdf플러그인에 특이하게 uml도 지원한다고 나와있다.
+  - 불행히도 안된다. 아래가 지원한다는 코드이다.
+  - 마크다운으로는 아니지만 js로 uml을 그리는게 있다.
+    - [시퀀스 다어이그램](https://bramp.github.io/js-sequence-diagrams/)
+    - [플로우 차트](http://flowchart.js.org/)
+    - plant uml : http://plantuml.com/ko/
+    - 온라인 plantuml : https://www.planttext.com/
+
+* 아쉬우니까 plant uml에대해서 따로 이야기 해야 할 것 같다.
+* 비주얼 코드에 대해서 도 알아보자 : https://gomcine.tistory.com/entry/VS-Code-Extension-%EC%84%A4%EC%B9%98-%EB%B0%8F-%EC%9C%A0%EC%9A%A9%ED%95%9C-Extension-%EC%86%8C%EA%B0%9C
+
 
 @startuml
-Bob -[#red]> Alice : hello
-Alice -[#0000FF]->Bob : ok
+Bob -> Alice : hello
+Alice ->Bob : ok
 @enduml
 
 
@@ -58,6 +68,8 @@ Alice -[#0000FF]->Bob : ok
 ### [마크다운 문법-한글소개](https://gist.github.com/ihoneymon/652be052a0727ad59601)
 ### [좀더 디테일한 마크다운 문법소개](https://heropy.blog/2017/09/30/markdown/)
 ### [GitHub Page생성시 나오는 가이드](./ref/github_page.md)
+## uml기능을 갖춘 마크다운 에디터 : [Typora](https://macnews.tistory.com/4799)
+### plant uml소개 : http://hochulshin.com/uml-plantuml/
 
 ---
 
