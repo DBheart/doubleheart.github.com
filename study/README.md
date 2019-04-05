@@ -1,8 +1,8 @@
 
 메이픈 프로젝트 만들기 연습하기 : 1시간내로 찍어보자.
-# [Maven Project](./study/maven_project.md)
-# [Spring MVC](./study/spring_mvc.md)
-# [Log_Manage](./study/log_manage.md)
+# [Maven Project](maven_project.md)
+# [Spring MVC](spring_mvc.md)
+# [Log_Manage](log_manage.md)
 
 ---
 
