@@ -1,4 +1,4 @@
-# [프로젝트 만들기](./study/README.md)
+# [프로젝트 만들기](./pratice_coding/README.md)
 
 ---
 
