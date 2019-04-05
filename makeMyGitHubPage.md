@@ -44,7 +44,7 @@
 # 비주얼코드 사용한 유지보수
 - [비주얼코드로 markdown사용하는 방법](https://blog.aliencube.org/ko/2016/07/06/markdown-in-visual-studio-code/)
 - 'markdown extension pack'이라는 익스텐션이 있는데 설치해서 사용하자. markdown에 필요한 플러그인을 통합적으로 설치해주는 것 같다.
-- 와 markdownlint는 쓰지말자. 설치했다가 물결표시가 장난 아니다. 통합팩에서 다지우고 'all in one', 'emoji','pdf'만 남기고 다 언인스톨했다.
+  - 와 markdownlint는 쓰지말자. 설치했다가 물결표시가 장난 아니다. 통합팩에서 다지우고 'all in one', 'emoji','pdf'만 남기고 다 언인스톨했다.
 - pdf플러그인에 특이하게 uml도 지원한다고 나와있다.
   - 불행히도 안된다. 아래가 지원한다는 코드이다.
   - 마크다운으로는 아니지만 js로 uml을 그리는게 있다.
