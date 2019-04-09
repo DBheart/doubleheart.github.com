@@ -1,126 +1,77 @@
-https://git-scm.com/book/ko/v2
+## git 혼자 쓰기
+혼자쓰는데 별다른게 있을까? 그냥 master에서 개발하고 마일스톤 왔을때 태그하고 하는게 좋을것 같다. 아래와 같은 명령어면 충분할듯하다.
 
-깃은 파일을 수정을 하면 add를 해준후에 commit를 해서 자기 자신의 repository에 완료했다고 알려주어야 한다.
-	- 자세한 메커니즘은 따로 보도록 한다.
-	- add한것을 되돌릴 방법은 없는것같다. commit한것도 되돌릴 방법은 없다. 
-		add하기전에 파일을 이전것으로 되돌리면 add대상이 아닌것 같다.
-	- 삭제는 반드시 git rm 파일로 삭제하도록 한다. 
-	- 히스토리는 커밋별로 볼수가 있는것 같다. 
-		이크립스에서는 프로젝트별로 볼수 있는것 같다. 
-		되돌리기 : https://git-scm.com/book/ko/v1/Git%EC%9D%98-%EA%B8%B0%EC%B4%88-%EB%90%98%EB%8F%8C%EB%A6%AC%EA%B8%B0
-			- 되돌리는 방법을 각 상태를 업데이트할때 CMD라인에서는 보여준다. 하지만 되돌리기는 하지말도록 하자. 
-			- 차라리 BRANCH 변경을 하도록 하자.
-	- 대신 이전 커밋한것과 비교를 해주는게 있었으면 좋겠는데 없는것 같다. 
-		-> 이크립스 툴에서는 history로 볼수 있는것 같다.
-		-> 어차피 기능별로 브랜치를 따야하므로 브랜치 별로 비교하면 될것 같다.
-	- 수정전과 비교하는 것은 GUI 프로그램을 사용하여서 보도록 하자.
-		> 이크립스의 history, source tree, git gui	
-	- git은 파일을 삭제할때와 브랜치별 merge할때 조심해야한다.
-
-리모트 이름은 보통 origin으로 되어있다. 이것은 주로 git init후 연결하거나 git서버에서 생성할때 정한다.
-	- https://git-scm.com/book/ko/v1/Git%EC%9D%98-%EA%B8%B0%EC%B4%88-%EB%A6%AC%EB%AA%A8%ED%8A%B8-%EC%A0%80%EC%9E%A5%EC%86%8C
-	- 원격저장소 확인 : git remote
-	- clone 명령으로 복제하면 원격 저장소를 추적하도록 자동으로 설정됩니다. 따라서 이후의 push 및 fetch / pull 명령으로 저장소를 생략 한 경우에도 제대로 변경 내용을 반영하고 검색 할 수 있습니다.
-
-
-많이 쓰는 명령어
 	- git add .
 	- git commit -m "commit message"
-	- git pull
 	- git push 로컬브랜치 리모트브랜치
-	- git checkout branch
-	- git checkout -b branch
+	- git pull : 다른곳에서 수정하였을때 코드 받아오기
 
-깃에서 살펴볼 이론	
-	다른 버전관리시스템과 다른점
-		Git으로 무얼 하든 데이터를 추가한다. 되돌리거나 데이터를 삭제할 방법이 없다.
-		그러므로 branch를 따서 작업을 해야한다.
-	상태확인의 중요성(파일 상태라는 조금 다르다)
-		Committed, Modified, Staged
-		각 상태별 디렉토리와 그것을 어떻게 옮기는 방법에 대해서는 알아두도록 하자
-			https://git-scm.com/book/ko/v1/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-Git-%EA%B8%B0%EC%B4%88
-	파일 상태 확인 : git status : untracked, unmodified, modified, staged		
-		- https://git-scm.com/book/ko/v1/Git%EC%9D%98-%EA%B8%B0%EC%B4%88-%EC%88%98%EC%A0%95%ED%95%98%EA%B3%A0-%EC%A0%80%EC%9E%A5%EC%86%8C%EC%97%90-%EC%A0%80%EC%9E%A5%ED%95%98%EA%B8%B0
+## git flow사용법
+> git으로 프로젝트를 하는 이상적인 방법인것 같다. 여러명이 할때 더 욱 유용하다. 혼자할때는 그냥 master하나만을 쓰는것도 괜찮은 것 같다.
+>> git의 브래치를 master, develop, feature로 크게 나누고 개발하는 방법이다.
 
-깃은 주로 요즘 깃허브를 이용한다. 그리고 git flow을 쓰는게 좋다.
-	깃을 로컬에서 init하는 방법이 있지만 주로 레파지토리에서 생성한후에 clone받는것이 좋다.
-	초기화면에 README.md파일을 만들어서 개요를 만드는게 좋다.
-	- 리모트의 develop나 master에 넣을때는 full request를 사용하여서 merge하도록 한다.
+[우아한 형제들의 글](http://woowabros.github.io/experience/2017/10/30/baemin-mobile-git-branch-strategy.html)이 잘 정리되어 있다. 하지만 혼자 썼을때는 저글이 이해가 되지 않았다. 직접 git을 쓰는 프로젝트에 들어와서 적용할것을 보고는 무엇인가 살펴보니까 이해가 되더라
 
-파일무시하기 
-	.gitignore파일을 만들어서 추가하도록 한다.
-		- 
+* 
 
-* 태그하기 
-	- https://git-scm.com/book/ko/v1/Git%EC%9D%98-%EA%B8%B0%EC%B4%88-%ED%83%9C%EA%B7%B8
+### 개발 흐름
+git flow는 협업을 위해 단계별로 branch를 나누는 것이라고 할수 있다.
+단계는 아래와 같다. 
+1. master, develop으로 나눈다
+2. 개발할 이슈(작업, 보통은 1개의 화면)가 들어올때 마다 feature브랜치를 따서 개발한다.
+    - 개발자는 remote의 develop를 local develop에 pull	받은다. 
+    - 개발한 것은 리모트 feature브랜치에 push한다.
+3. pull request로 remote의 develop과 merge를 요청한다.
+    - 이때 코드 리뷰를 실시 합니다.
+    - pull reuquest에서 통과된것은 개발서버에 반영됩니다.
+4. develop에 merge한 것을 테스터가 테스트를 한뒤에 확인한다. 
+    - 덜 된것은 수정 요청
+    - feature브랜치 별로 테스터가 받아서 로컬에서 확인해 볼수도 있습니다.
+5. 기능간에 보여줄정도가 되면 master에 반영
+    - 마일스톤 단위로 하는게 좋을 것으로 보입니다.
+    - master가 변할때마다 tag를 찍는것 같다.
+   (아직은 여기까지 안해봐서 상상해 본다.)
+6. real server에 반영하기 위해서 realese브랜치에 반영
+    - real server에서 오류가 난 사항은 hotfixes 브랜치에서 개발하여서 반영한다.(여기도 잘모른다. 상상해볼 뿐)
 
-* 깃 branch merge 충돌
-	- https://git-scm.com/book/ko/v1/Git-%EB%B8%8C%EB%9E%9C%EC%B9%98-%EB%B8%8C%EB%9E%9C%EC%B9%98%EC%99%80-Merge%EC%9D%98-%EA%B8%B0%EC%B4%88
+> 협업을 위해서 온라인(클라우드)를 적극 활용하는 것이 좋다. 회사에서 직접 도입하는 것보다는 외부에서 개발한것을 사용할 것을 권장한다. 배보다 배꼽이 커지는 경우가 있다. 
+>>협업을 위해 사용법만 익히는 것도 어려운데 그것을 운영까지 하다니 생각만으로 덜덜하다.
 
-* 깃 브랜치 전략 : git flow
+### 브랜치의 구조
+브랜치를 상하 구조로 보면 master가 제일 최상위 보스이다. develop이 중간 보스이다. feature 브랜치는 말단들이다. 그래서 feature가 가장 많다. 보통 기능단위로 나오며 "feature/기능명"이다. realese는 일종의 바지 사장이다. 보여주기 위한 것이라고 나할까? hotfixes는 감사라고 보면 되겠다. 
+1. 감사라 그런지 hotfixes로 수정한것은 master와 develop에만 반영되는 것을 볼수 있다.
+2. 소비자가 보는 버전은 realese와 master가 대부분이며, fork로 받는것은 대부분 master로 알고 있다.
 
-reset : https://git-scm.com/book/ko/v1/Git%EC%9D%98-%EA%B8%B0%EC%B4%88-%EB%90%98%EB%8F%8C%EB%A6%AC%EA%B8%B0
-	- 이전파일로 되돌리는 것 , add한 파일을 이전 상태로 되돌리는 것
-	- 파일이 state상태가 된것을 unstate상태로 되돌리는 명령어	
+* git reference를 보니까 stable인가 하는 임시로 가져다 쓰는 것도 있던데.. 그냥 커밋을 하고 체크아웃하고 다른 브랜치따서 하면될것 같은데 너무 깊게 파는것 같다.
 
-rebase : https://git-scm.com/book/ko/v1/Git-%EB%B8%8C%EB%9E%9C%EC%B9%98-Rebase%ED%95%98%EA%B8%B0
-	- 브랜치를 특정 브랜치로 바꾸는것 같다... 아닌가? 더 자세히 봐야할것 같다.
-	- rebase는 공통으로 사용하는 branch에는 적용하지 말자. master나 develop같은것. 자신이 개발하는 곳만 사용하도록 한다.
-
-* 사용하지 않는 브랜치는 정리하는게 옮다.	
-* 깃서버에 많은 시간을 들이지 말자. 그냥... 깃허브를 쓰는게 옮은것 같다.
-* 깃허브에서 원격저장소 이름이 origin인 이유는?
-	- https://blog.outsider.ne.kr/866
-	- 아마.. 자신의 컴퓨터에서 원격저장소를 origin으로 등록하는 것일것이다. 어딘가에 설정되어있다. git setting하는 곳에...
-	-  로컬 저장소에 등록된 원격저장소 목록을 보면 clone을 받아온 대상인 원격 저장소가 origin이라는 이름으로 등록되어 있다. github에서 저장소를 새로 생성하면(fork로 생성하는 경우외에) git remote add origin git@github.com:outsideris/jquery.git와 같이 저장소를 추가하도록 안내를 하는데 이는 관례에 따라 메인 원격저장소를 origin으로 등록한 것이다.
-
-* 깃허브 fork 전략 
-	- https://git-scm.com/book/ko/v1/Git-%EC%84%9C%EB%B2%84-Hosted-Git
-	- 자신에게 보는 권한만 있다면 fork해서 수정하여 사용할수 있다.
-	- 또한 자신의 것이 원본에 반영되기를 원한다면 full request를 해주면 된다.
-
-* 좋은 커밋 메세지 
-마지막으로 명심해야 할 점은 커밋 메시지 자체다. 좋은 커밋 메시지를 작성하는 습관은 Git을 사용하는 데 도움이 많이 된다. 일반적으로 커밋 메시지를 작성할 때 사용하는 규칙이 있다. 메시지의 첫 줄에 50자가 넘지 않는 아주 간략한 메시지를 적어 해당 커밋을 요약한다. 다음 한 줄은 비우고 그다음 줄부터 커밋을 자세히 설명한다. 예를 들어 Git 개발 프로젝트에서는 개발 동기와 구현 상황의 제약조건이나 상황 등을 자세하게 요구한다. 이런 점은 따를 만한 좋은 가이드라인이다. 그리고 현재형 표현을 사용하는 것이 좋다. 예를 들어 "I added tests for (테스트를 추가함)" 보다는 "Add tests for (테스트 추가)" 와 같은 메시지를 작성한다. 아래 예제는 Pope at tpope.net이 작성한 커밋 메시지이다.
- - https://git-scm.com/book/ko/v1/%EB%B6%84%EC%82%B0-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EC%9D%98-Git-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EC%97%90-%EA%B8%B0%EC%97%AC%ED%95%98%EA%B8%B0
-
-* 태그 전략 
-	- https://git-scm.com/book/ko/v1/%EB%B6%84%EC%82%B0-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EC%9D%98-Git-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%9A%B4%EC%98%81%ED%95%98%EA%B8%B0
-
-* stash : 임시 저장
-	- https://git-scm.com/book/ko/v1/Git-%EB%8F%84%EA%B5%AC-Stashing
-
-* 커밋전략 : ?
-	- https://git-scm.com/book/ko/v1/Git-%EB%8F%84%EA%B5%AC-%ED%9E%88%EC%8A%A4%ED%86%A0%EB%A6%AC-%EB%8B%A8%EC%9E%A5%ED%95%98%EA%B8%B0#%EC%BB%A4%EB%B0%8B-%EB%A9%94%EC%8B%9C%EC%A7%80%EB%A5%BC-%EC%97%AC%EB%9F%AC-%EA%B0%9C-%EC%88%98%EC%A0%95%ED%95%98%EA%B8%B0
+### git flow를 위해서 필요한 준비
+1. 개발자 - develop관리자 - 테스터 구조로 개발이 이루어져야 한다. 
+2. local과 test서버 real서버로 구성되어야 한다.
+3. realese와 master관리자는 따로 있어야 할것이다.
+   1. 관리자를 두지말고 CI툴을 써도 쓰면 되지 않을까 한다. 다만 CI툴 관리자는 있어야 겠지?
 
 
+* develop관리자는 중간보스급의 권한을 가져야하고, 코드를 관리해야 한다. 코드리뷰의 책임이 있다.(그냥 내 생각)
+* 서버 반영을 위한 realese와 master관리자는 CI툴을 써야지 편할 것으로 보인다. master관리자는 아키텍쳐가 되겠지?
+* 테스터는 때로는 PL이나 PM이 될수도 있을것 같다.
 
-
-
-
-
-
-참조 
-https://blog.outsider.ne.kr/865
-https://blog.outsider.ne.kr/866
-
-
-깃 레퍼런스 : https://git-scm.com/book/ko/v2
-
-
-
+## git flow에 이어서 fork 전략
+> fork해서 따로 분리해서 개발한 뒤에 정말~ 필요한것 같으면 원문 소스에 가서 pull request를 요청하면 되지 않을까 싶다.
+>> 같은 소스이지만 다른 url을 가질때 이렇게 fork해서 개발하면 되지 않을까? 자기 자신이 fork하는 것은 이상할까? 안될까?
 ---
+정리하고 보니 우아한형제글이 더 잘 이해가 되는 것 같다.
+제일 이해가 안되었던것은 레파지토리의 이름들이었다. 정리를 해보자.
 
-https://blog.naver.com/manhwamani/220571967289
+1. Upstream Remote Repository
+	- fork의 최상위. 회장님 정도 되겠다.
+2. Origin Remote Repository
+   1. 회장님것을 나의 github아이디로 가져온 원격 버전, 사장님이다.
+3. Local Repository 
+   1. github에 있는것을 나의 컴퓨터에 설치한 버전, 클론받은것이다.
 
-develop을 중점으로 개발하고, 리뷰한뒤에 master로 반영한 다음에 배포한다. 중간에 feature로 수정을 가한뒤에 develop로 반영한다.
-   - 미라콤의 경우에는 개발자별로 feature를 가는것 같다. release는 안정화버전.. 이고 hotfix는 반영했다가 버그나온것을 패치한 버전이다. 
-  - reset이 있는데.. 이것은 로컬에 있는것을 강제로 받는것같다. 
-   - remote의 develop와 feature와 맞추는 방법은 없는가?
-      -> remote develop와 local develop을 맞춘후에 reset을 해서 develop한걸로 강제로 맞추었다. reset도 hard로 해야지 강제로 된다.
-      -> 커맨드창으로 하는 방법을 물어보자.
+그러니까 오픈소스 개발하는 방식을 도입한것 같다.
+모든 소스는 fork를 받아서 내 원격 github에 둔 다음 로컬로 받아서 프로젝트를 지원하는 것이다. 
+fork는 pull request를 하고 말이다. 내가 위에서 기능 브랜치와 원격 re
 
-* 그런데... develop를 feature로 넣는 방법은 무엇인가?
-
-
-tag는 어떻게 되는 것인가?
+> 잠깐 내가 git flow를 잘못알고 있는것인가? 내가 했던거랑 많이 다르다. 우아한형제들꺼랑 또 다르고... 잠시 보류한뒤에 다시 정리해 보야아겠다. 오늘은 시간이 없어서 이만...
 
