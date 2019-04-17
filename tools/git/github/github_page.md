@@ -8,9 +8,9 @@
 1. 언어는 마크다운 언어를 쓴다.
 2. 파일은 md파일을 만든다.
 3. 링크는 md를 링크하면 된다. 
-    - [제목](url) 
+    - \[제목](url)
     - 폴더에 있는것을 링크하려면 절대주소나 상대주소를 쓰면된다.
-    - ex) [Log_Manage](./study/log_manage.md)
+    - ex) \[Log_Manage](./study/log_manage.md)
 4. 툴은 비주얼코드로 쓰자. git과 연결도 쉽다.
     - 비주얼코드에서 md가 미리보기도 되니까 딱 좋다.
 5. 접근방법은 두가지가 있다.
@@ -67,10 +67,9 @@ Alice ->Bob : ok
 ## [마크다운 문법](https://guides.github.com/features/mastering-markdown/)
 ### [마크다운 문법-한글소개](https://gist.github.com/ihoneymon/652be052a0727ad59601)
 ### [좀더 디테일한 마크다운 문법소개](https://heropy.blog/2017/09/30/markdown/)
-### [GitHub Page생성시 나오는 가이드](./ref/github_page.md)
+### [GitHub Page생성시 나오는 가이드](welcome_page.md)
 ## uml기능을 갖춘 마크다운 에디터 : [Typora](https://macnews.tistory.com/4799)
 ### plant uml소개 : http://hochulshin.com/uml-plantuml/
-## [welcome page](welcome_page.md)
 
 ---
 
