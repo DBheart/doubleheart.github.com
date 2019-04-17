@@ -1,4 +1,4 @@
-## git 혼자 쓰기
+## 1. git 혼자 쓰기
 혼자쓰는데 별다른게 있을까? 그냥 master에서 개발하고 마일스톤 왔을때 태그하고 하는게 좋을것 같다. 아래와 같은 명령어면 충분할듯하다.
 
 	- git add .
@@ -6,17 +6,17 @@
 	- git push 로컬브랜치 리모트브랜치
 	- git pull : 다른곳에서 수정하였을때 코드 받아오기
 
-## [git flow](https://danielkummer.github.io/git-flow-cheatsheet/index.ko_KR.html) 사용법
+## 2. [git flow](https://danielkummer.github.io/git-flow-cheatsheet/index.ko_KR.html) 사용법
 > git으로 프로젝트를 하는 이상적인 방법인것 같다. 여러명이 할때 더 욱 유용하다. 혼자할때는 그냥 master하나만을 쓰는것도 괜찮은 것 같다.
->> git의 브래치를 master, develop, feature로 크게 나누고 개발하는 방법
+>> git의 브랜치를 master, develop, feature로 크게 나누고 개발하는 방법
 
-[우아한 형제들의 글](http://woowabros.github.io/experience/2017/10/30/baemin-mobile-git-branch-strategy.html)이 잘 정리되어 있다. 하지만 혼자 썼을때는 저글이 이해가 되지 않았다. 직접 git을 쓰는 프로젝트에 들어와서 적용할것을 보고는 무엇인가 살펴보니까 이해가 되더군요.
+[우아한 형제들의 글](http://woowabros.github.io/experience/2017/10/30/baemin-mobile-git-branch-strategy.html)이 잘 정리되어 있다. 하지만 혼자 썼을때는 저글이 이해가 되지 않는데 직접 git을 쓰는 프로젝트에 들어와서 적용할것을 보고는 무엇인가 살펴보니까 이해가 되었다.
 
-* git의 branch와 repository전략은 참 다양한것 같다. 여기서 다 언급하기는 나의 지식이 짧고, 다 알수 있는것이 아니므로 중앙집중식에 대해서 설명해 보도록 하겠습니다. [링크](https://git-scm.com/book/ko/v2/%EB%B6%84%EC%82%B0-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EC%9D%98-Git-%EB%B6%84%EC%82%B0-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EC%9D%98-%EC%9B%8C%ED%81%AC%ED%94%8C%EB%A1%9C#_%EC%A4%91%EC%95%99%EC%A7%91%EC%A4%91%EC%8B%9D_%EC%9B%8C%ED%81%AC%ED%94%8C%EB%A1%9C)
+* git의 branch와 repository전략은 참 다양한것 같다. 여기서 다 언급하기는 나의 지식이 짧고, 다 알수 있는것이 아니므로 [중앙집중식에 대해서 설명한 글](https://git-scm.com/book/ko/v2/%EB%B6%84%EC%82%B0-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EC%9D%98-Git-%EB%B6%84%EC%82%B0-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EC%9D%98-%EC%9B%8C%ED%81%AC%ED%94%8C%EB%A1%9C#_%EC%A4%91%EC%95%99%EC%A7%91%EC%A4%91%EC%8B%9D_%EC%9B%8C%ED%81%AC%ED%94%8C%EB%A1%9C)을 보도록하자.
 
 * 우아한형제들은 중앙집중방식에서 좀더 확장한 개념으로 보인다. fork까지 활용하는 것을 보니 말이다.
 
-### 개발 흐름
+### 2.1. 개발 흐름
 git flow는 협업을 위해 단계별로 branch를 나누는 것이라고 할수 있다.
 단계는 아래와 같다. 
 1. master, develop으로 나눈다
@@ -45,18 +45,18 @@ git flow는 협업을 위해 단계별로 branch를 나누는 것이라고 할�
 * 이크립스와 비주얼스튜디오에서도 git을 쓸수 있게 해준다.
 * source tree도 그렇고 개발툴들에서도 사용할수 있지만 무척느리다. 그냥 git bash나 명령문으로 하는 게 좋지 않을까 한다.
 
-### 브랜치의 구조
+### 2.2 브랜치의 구조
 브랜치를 상하 구조로 보면 master가 제일 최상위 보스이다. develop이 중간 보스이다. feature 브랜치는 말단들이다. 그래서 feature가 가장 많다. 보통 기능단위로 나오며 "feature/기능명"이다. realese는 일종의 바지 사장이다. 보여주기 위한 것이라고 나할까? hotfixes는 감사라고 보면 되겠다. 
 1. 감사라 그런지 hotfixes로 수정한것은 master와 develop에만 반영되는 것을 볼수 있다.
 2. 소비자가 보는 버전은 realese와 master가 대부분이며, fork로 받는것은 대부분 master로 알고 있다.
 
-* git에 stash라는 단계가 임시 단계가 있다. 써본결과 참 편리하다. 브랜치는 바꿔야하는데 체크아웃할수 없어서 브랜치를 바꾸지 못했을때 쓸수 있는 임시 저장소에 넣어 놓고, checkout할수 있게 모두 바꾸어 준다.
-
 * 개발자는 feature만을 관리하며, develop는 읽기 권한이 있다.
-* 테스터는 develop 
+* 테스터는 develop를 개발서버에 반영된것을 가지고 보면 될것 같다.
 
 ### git flow를 위해서 필요한 준비
 1. 개발자 - develop관리자 - 테스터 구조로 이루어져야 한다. 
+   1. 소스관리를 위한 아키텍쳐나 중간관리자가 있어야 한다는 말이다.
+   2. 여기에 fork까지 들어가면 fork관리자도 있어야하겠지?
 2. 서버는 local과 test서버 real서버로 구성되어야 한다.
 3. realese와 master관리자는 따로 있어야 할것이다.
 
