@@ -72,3 +72,11 @@ class ScrollBox extends Component{
 ```
 
 * 화면을 꾸미는 CSS는 3가지의 사용방식이 있습니다. 가장 기본적인것은 css파일을 사용하는 형태입니다. 그외에 Sass와 styled-components를 사용하는 방법이 있습니다.
+
+* 디렉토리에 index.js를 생성한후에 import할때 그 디렉토리를 import하면 index.js를 가져오는 구조로 되어있다.
+> 확인해보자.
+
+* 전개 연산자
+* Object.assign 함수
+* onContextMenu 이벤트
+> onContextMenu를 Dom의 이벤트로 줄수 있는데 리액트에서 제공하는 것같다. 마우스 오른쪽 버튼을 눌렀을때 메뉴가 열리는 이벤트라고 한다. 이때 e.preventDefault() 함수를 호출하면 메뉴가 열리는 것을 방지하고 스크립트만 실행할수 있게 한다.

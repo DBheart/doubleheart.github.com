@@ -16,9 +16,15 @@
 
 # [리액트의 개발](react_code.md)
 ## [렌더링, 라이프 사이클](react_life.md)
-## [데이터 : 상태관리](react_data.md)
-### 리덕스
+## [데이터 : props, state](react_data.md)
+### [리덕스](react_redux.md)
 ## 통신 : axios
+
+
+# 개발연습
+## React프로젝트 
+## 컴포넌트 개발
+## 리덕스 사용 개발
 
 ---
 
