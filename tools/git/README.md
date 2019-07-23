@@ -2,6 +2,7 @@
 
 ## 1. [Git 사용방법](git_use.md)
 ## 2. [Git Flow](git_flow.md)
+## 3. [Git Tools 사용법](git_tools.md)
 
 ## 번외 1. [GitHub로 프로젝트 관리하기](./github/github_issueManager.md)
 ## 번외 2. [Git Page 사용방법](./github/github_page.md)
@@ -28,7 +29,7 @@ Git은 도구 이다. 개발을 다른 사람과 효율적으로 개발하기 �
 그외에 조금 약한것이 master에 태그를 다는 것인데.. 아직 경험을 해볼 기회가 없어서 하지를 못했다. tag가 다음에 개발할것하고 비교하는 단위로 쓰일것인데... 소스가 많을수록 의미가 있을까 싶기도 하다. fork까지 브랜치전략에 포함되는 버전에서 유용하지 않을까 싶기도 하고
 
 ## 3. ETC
-### 3.1 툴에서 사용하는 법은 나중에 따로 정리
+### 3.1 [툴에서 사용하는 법](git_tools.md)은 나중에 따로 정리
 * 이크립스에서 git 사용법
 * intellJ에서 git 사용법
 * visual studio code에서 git 사용법
