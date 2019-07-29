@@ -8,11 +8,19 @@
 ## 번외 2. [Git Page 사용방법](./github/github_page.md)
 ## 번외 3. [git 레퍼런스](https://git-scm.com/book/ko/v2)
 
-GitHub, Git Flow을 이용하여 Git을 어떻게 쓰면 좋일지 정리하는 글이며, Git Lab나 그외 개인 Git서버에서도 사용할수 있을거라고 생각된다.
+---
 
-번외로 GitHub Page에 대해서 쓰고 있다. GitHub Page는 이제부터 공부하고 정리할 내용을 담는 곳이어서 미리 정리하여 놓았다. 하위 폴더별로 연습한것들 알아본것들을 정리해 놓을 예정이다.
+> GitHub, Git Flow을 이용한 Git사용 정리
+>> 번외로 GitHub Page에 대해서 쓰고 있다. 이 blog Repository가 GitHub Page로 블로그 내용도 대신하고 있다. 
+>>> 공부한것으로 정리하는 블로그이며, 그외 관심사도 넣을 예정이다.
 
-git을 잘쓰기 위해서는 위해서는 status와 branch전략을 종합적으로 이해하여야 한다. 권장하는 branch전략이 git flow이고 우아한 형제들이 그것을 fork포함해서 어떻게 쓰고 있는지 소개하는 글이 잘 정리되어있어서 참조를 많이 하였다.
+git을 잘쓰기 위해서는 위해서는 status와 branch전략을 종합적으로 이해하여야 한다. 
+요즘 유행하면서 내가 공감하고 있는  branch전략은 git flow이다.
+우아한 형제들 글이 제일 잘 정리되어있는것 같아 많은 참조를 하였다.
+
+여기서 언급하지 않는것은 fork전략인데 이것도 그렇게 다르지 않을 것이라고 본다. fork를 하여서 내 github로 가져오는 과정이 추가되며, pull request도 범위가 한단계 늘어서 내 remote에서 다른 사람의 remote로 범위를 넓혀가는 것뿐인것으로 보인다. 그전에 rebase를 해서 이력을 정리할 필요는 있어 보인다.
+
+그외에 조금 약한것이 master에 태그를 다는 것인데.. 아직 경험을 해볼 기회가 없어서 하지를 못했다. tag가 다음에 개발할것하고 비교하는 단위로 쓰일것인데... 소스가 많을수록 의미가 있을까 싶기도 하다. fork까지 브랜치전략에 포함되는 버전에서 유용하지 않을까 싶기도 하고
 
 Git의 동작원리를 이해하기 위해서는 아래 글을 읽고 보도록하자.
 * Git 레퍼런스 
@@ -21,12 +29,6 @@ Git의 동작원리를 이해하기 위해서는 아래 글을 읽고 보도록�
 * outsider님이 들려주는 git 전체흐름 이해하기
     - https://blog.outsider.ne.kr/865
     - https://blog.outsider.ne.kr/866
-
-Git은 도구 이다. 개발을 다른 사람과 효율적으로 개발하기 위한 도구. 너무 어려운 내용와 안쓸 것 같은 내용은 빼는게 좋을것으로 보인다. 그럼에도 Git에만 알아야 할것이 참 많은 것 같다.
-
-여기서 언급하지 않는것은 fork전략인데 이것도 그렇게 다르지 않을 것이라고 본다. fork를 하여서 내 github로 가져오는 과정이 추가되며, pull request도 범위가 한단계 늘어서 내 remote에서 다른 사람의 remote로 범위를 넓혀가는 것뿐인것으로 보인다. 그전에 rebase를 해서 이력을 정리할 필요는 있어 보인다.
-
-그외에 조금 약한것이 master에 태그를 다는 것인데.. 아직 경험을 해볼 기회가 없어서 하지를 못했다. tag가 다음에 개발할것하고 비교하는 단위로 쓰일것인데... 소스가 많을수록 의미가 있을까 싶기도 하다. fork까지 브랜치전략에 포함되는 버전에서 유용하지 않을까 싶기도 하고
 
 ## 3. ETC
 ### 3.1 [툴에서 사용하는 법](git_tools.md)은 나중에 따로 정리
@@ -55,7 +57,7 @@ Git은 도구 이다. 개발을 다른 사람과 효율적으로 개발하기 �
 * 파일 상태 확인 : git status : untracked, unmodified, modified, staged	    
     * unstaged : add하기 전 상태
     * staged : add한 후 상태, working 디렉토리...
-    * untracked : ??
+    * untracked : 아직 관리되지 않는 파일, 주로 내가 생성한 파일에서 많이 나온다.
     * Committed, Modified, Staged
 * cherry-pick : 일부 commit의 스냅샷을 반영할때 사용한다
     * 하지만 너무 많을꺼 같아서 하기 싫으네?
@@ -70,8 +72,6 @@ Git은 도구 이다. 개발을 다른 사람과 효율적으로 개발하기 �
     - revert는 하지 말자.
 * git 기초 문제 해결 : https://seongbeom.github.io/2017/02/28/oh-shit-git.html#give-up
 
-* GUI 툴을 사용하도록 하자.
-    - source tree가 가장 유명한 듯
 
 * remote이름이 origin으로 되어있는것에 대한 고찰
 > 리모트 이름은 보통 origin으로 되어있다. 이 이름은 주로 git init후 원격으로 연결할때 정하고는 하는데, git서버에서 프로젝트를 생성한후 clone으로 할경우 remote이름을 origin으로 정하는 것 같다.([레퍼런스 내용](https://git-scm.com/book/ko/v1/Git%EC%9D%98-%EA%B8%B0%EC%B4%88-%EB%A6%AC%EB%AA%A8%ED%8A%B8-%EC%A0%80%EC%9E%A5%EC%86%8C))
