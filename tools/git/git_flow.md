@@ -10,9 +10,9 @@
 > git으로 프로젝트를 하는 이상적인 방법
 >> git의 브랜치를 master, develop, feature로 크게 나누고 개발하는 방법
 
-[우아한 형제들의 글](http://woowabros.github.io/experience/2017/10/30/baemin-mobile-git-branch-strategy.html)이 잘 정리되어 있다. 하지만 혼자 썼을때는 저글이 이해가 되지 않는데 직접 git을 쓰는 프로젝트에 들어와서 적용할것을 보고는 무엇인가 살펴보니까 이해가 되었다.
+[우아한 형제들의 글](http://woowabros.github.io/experience/2017/10/30/baemin-mobile-git-branch-strategy.html)을 읽어 보고 시작하자. Git Flow를 어떻게 쓸지 개념이 좀 잡힐 것이다.
 
-* git의 branch와 repository전략은 참 다양한것 같다. 여기서 다 언급하기는 나의 지식이 짧고, 다 알수 있는것이 아니므로 [중앙집중식에 대해서 설명한 글](https://git-scm.com/book/ko/v2/%EB%B6%84%EC%82%B0-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EC%9D%98-Git-%EB%B6%84%EC%82%B0-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EC%9D%98-%EC%9B%8C%ED%81%AC%ED%94%8C%EB%A1%9C#_%EC%A4%91%EC%95%99%EC%A7%91%EC%A4%91%EC%8B%9D_%EC%9B%8C%ED%81%AC%ED%94%8C%EB%A1%9C)을 보도록하자.
+* 우아한 형제의 git의 branch와 repository전략 : [중앙집중식에 대해서 설명한 글](https://git-scm.com/book/ko/v2/%EB%B6%84%EC%82%B0-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EC%9D%98-Git-%EB%B6%84%EC%82%B0-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EC%9D%98-%EC%9B%8C%ED%81%AC%ED%94%8C%EB%A1%9C#_%EC%A4%91%EC%95%99%EC%A7%91%EC%A4%91%EC%8B%9D_%EC%9B%8C%ED%81%AC%ED%94%8C%EB%A1%9C)을 보도록하자.
 
 * 우아한형제들은 중앙집중방식에서 좀더 확장한 개념으로 보인다. fork까지 활용하는 것을 보니 말이다.
 
