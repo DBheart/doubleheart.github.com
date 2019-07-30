@@ -7,7 +7,7 @@
 	- git pull : 다른곳에서 수정하였을때 코드 받아오기
 
 ## 2. [git flow](https://danielkummer.github.io/git-flow-cheatsheet/index.ko_KR.html) 사용법
-> git으로 프로젝트를 하는 이상적인 방법인것 같다. 여러명이 할때 더 욱 유용하다. 혼자할때는 그냥 master하나만을 쓰는것도 괜찮은 것 같다.
+> git으로 프로젝트를 하는 이상적인 방법
 >> git의 브랜치를 master, develop, feature로 크게 나누고 개발하는 방법
 
 [우아한 형제들의 글](http://woowabros.github.io/experience/2017/10/30/baemin-mobile-git-branch-strategy.html)이 잘 정리되어 있다. 하지만 혼자 썼을때는 저글이 이해가 되지 않는데 직접 git을 쓰는 프로젝트에 들어와서 적용할것을 보고는 무엇인가 살펴보니까 이해가 되었다.
