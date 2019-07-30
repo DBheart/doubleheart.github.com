@@ -7,14 +7,27 @@
 ### 4.1 *사례 : 나중에 알아보기
 ### 4.2 GitHub인증
 > 두가지 방법이 있다.
-1. 
-1. github에 내컴퓨터를 ssh로 접근할수 있게 등록하는 방법
-2. clone후에 로그인아이디와 패스워드를 입력하는 방법
-   1. 이게 되는지 했갈린다. 내 컴퓨터는 우선 인증을 받아놔서 말이다.
+1. 맥에서 사용방법
+    - github에 내컴퓨터를 ssh로 접근할수 있게 등록하는 방법
+    - clone후에 로그인아이디와 패스워드를 입력하는 방법
+        - 이게 되는지 했갈린다. 내 컴퓨터는 우선 인증을 받아놔서 말이다.
+2. 윈도우의 다른 방법이 있다.
+    - 임시 조치 방법
+```
+아래와 같이 username과 password자리에 사용자명과 변경된 패스워드를 넣도록한다.
+https://username:password@github.com/username/repository.git
+```
+    - 1번과 같이 하면 임시 조치일뿐 받을때 [깃 설정변경](https://kimdoky.github.io/git/2017/05/19/git-change-passwd.html)을 바꿔야한다.
+```
+기존정보를 삭제하고 다시 입력하면 된다.
+git config --unset credential.helper
+```
 
 ## 번외 1. [GitHub로 프로젝트 관리하기](./github/github_issueManager.md)
 ## 번외 2. [Git Page 사용방법](./github/github_page.md)
 ## 번외 3. [git 레퍼런스](https://git-scm.com/book/ko/v2)
+
+
 
 ---
 
