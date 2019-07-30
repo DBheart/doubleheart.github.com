@@ -13,8 +13,8 @@
 ---
 
 > GitHub, Git Flow을 이용한 Git사용 정리
->> 번외로 GitHub Page에 대해서 쓰고 있다. 이 blog Repository가 GitHub Page로 블로그 내용도 대신하고 있다. 
->>> 공부한것으로 정리하는 블로그이며, 그외 관심사도 넣을 예정이다.
+>> 번뇌인 GitHub Page는 깃을 통해 만드는 블로그이다.
+>>> 테마를 정하며, 에디터 언어는 마크다운 이다.
 
 git을 잘쓰기 위해서는 위해서는 status와 branch전략을 종합적으로 이해하여야 한다. 
 요즘 유행하면서 내가 공감하고 있는  branch전략은 git flow이다.
