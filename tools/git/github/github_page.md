@@ -64,17 +64,12 @@ Alice ->Bob : ok
     - 깃허브에서 적용할때는 이렇게까지는 필요없는 것 같다.
 
 # 기타
-## [마크다운 문법](https://guides.github.com/features/mastering-markdown/)
-### [마크다운 문법-한글소개](https://gist.github.com/ihoneymon/652be052a0727ad59601)
-### [좀더 디테일한 마크다운 문법소개](https://heropy.blog/2017/09/30/markdown/)
+### [마크다운 알아보기](https://github.com/DBheart/blog/wiki/markdown)
 ### [GitHub Page생성시 나오는 가이드](welcome_page.md)
-## uml기능을 갖춘 마크다운 에디터 : [Typora](https://macnews.tistory.com/4799)
-### plant uml소개 : http://hochulshin.com/uml-plantuml/
 
 ---
 
-마크다운 통합팩에 포함된 것들
-
+vs code의 마크다운 통합팩에 포함된 것들
 1. Markdown All in One - All you need for Markdown (keyboard shortcuts, table of contents, auto preview and more).
 2. markdownlint - Markdown/CommonMark linting and style checking for Visual Studio Code.
 3. Markdown PDF - This extension convert Markdown file to pdf, html, png or jpeg file.
