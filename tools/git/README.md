@@ -3,12 +3,18 @@
 ## 1. [Git 사용방법](git_use.md)
 ## 2. [Git Flow](git_flow.md)
 ## 3. [Git Tools 사용법](git_tools.md)
+## 4. ETC
+### 4.1 *사례 : 나중에 알아보기
+### 4.2 GitHub인증
+> 두가지 방법이 있다.
+1. 
+1. github에 내컴퓨터를 ssh로 접근할수 있게 등록하는 방법
+2. clone후에 로그인아이디와 패스워드를 입력하는 방법
+   1. 이게 되는지 했갈린다. 내 컴퓨터는 우선 인증을 받아놔서 말이다.
 
 ## 번외 1. [GitHub로 프로젝트 관리하기](./github/github_issueManager.md)
 ## 번외 2. [Git Page 사용방법](./github/github_page.md)
 ## 번외 3. [git 레퍼런스](https://git-scm.com/book/ko/v2)
-
-* 사용 사례
 
 ---
 
@@ -34,19 +40,6 @@ Git의 동작원리를 이해하기 위해서는 아래 글을 읽고 보도록�
     - https://blog.outsider.ne.kr/865
     - https://blog.outsider.ne.kr/866
 
-## 3. ETC
-### 3.1 [툴에서 사용하는 법](git_tools.md)은 나중에 따로 정리
-* 이크립스에서 git 사용법
-* intellJ에서 git 사용법
-* visual studio code에서 git 사용법
-* source tree에서 git 사용법
-
-### 3.2 GitHub인증
-> 두가지 방법이 있다.
-1. github에 내컴퓨터를 ssh로 접근할수 있게 등록하는 방법
-2. clone후에 로그인아이디와 패스워드를 입력하는 방법
-   1. 이게 되는지 했갈린다. 내 컴퓨터는 우선 인증을 받아놔서 말이다.
-  
 ---
 ## 용어
 
