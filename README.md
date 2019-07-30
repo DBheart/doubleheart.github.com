@@ -7,7 +7,7 @@
 
 현재 정리 주인공들
 1. React.js
-2. Git
+2. [Git](../tools/git)
 
 
 * [깃허브 페이지 만들기](makeMyGitHubPage.md)
