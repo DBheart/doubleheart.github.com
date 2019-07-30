@@ -117,7 +117,57 @@ master, develop, feature(작업브랜치)로 진행된다는 가정하에서 보
 git update-index --assume-unchanged 파일명
 ```
 
+## 충돌에 대한 해결방법
+### 무시하기 설정
+1. [.gitignore](https://gmlwjd9405.github.io/2017/10/06/make-gitignore-file.html) 설정
+    - 로컬에서만 적용가능한지 확인 필요 
+2. [Assume](https://blog.outsider.ne.kr/817) 설정
+    - Pull받을때 수정되어야한다. 수정되는데 확인 필요
+    - 이건 관리 대상에서 제외 하는 방법이다.
+### commit 이전에 [취소하기](https://gmlwjd9405.github.io/2018/05/25/git-add-cancle.html)
+1. Add한것 취소: git reset HEAD 파일
+2. 수정할것 되돌리기 : git checkout -- 파일
+3. [커밋한것 수정하기](https://backlog.com/git-tutorial/kr/reference/log.html) : amend옵션
+    - 커밋 메세지 수정 : git commit --amend
+    - 커밋한것에 파일 추가 : add로 추가후 1번과 같은 a
+4. 커밋취소
+### 커밋버전끼리 되돌리기
+- merge conflict시에 일반적인 해결법 : https://blog.outsider.ne.kr/805
+- merge할때 충돌나면 일방적으로 한쪽의 branch내용으로 바꾸기
+    - 충돌난 파일은 내것으로 바꾸기 : git merge -Xours develop
+    - 충돌난 파일은 지정된 branch로 바꾸기 : git merge -Xtheirs develop
 
+- merge 이전 파일로 되돌리기(modify 상태로 되돌리기)
+    1. 이전버전의 상태로 되돌리기 : git reset HEAD^ 파일/디렉토리
+    2. 이전버전의 파일로 되돌리기 : git checkout 파일/디렉토리
+    3. 파일의 상태를 add에서 add하기 전으로 되돌리기 : git reset 파일/디렉토리
+    - one.txt로 진행
+        - 이전버전의 상태로 되돌리기 : git reset HEAD^ one.txt
+        - 이전버전의 파일로 되돌리기 : git checkout one.txt
+        - 파일의 상태를 add에서 add하기 전으로 되돌리기 : git reset one.txt
+
+    - 추가로 merge conflict가 발생했을 때 일일이 파일을 수정하는 대신 checkout 옵션을 주어 처리할 수 있습니다.
+    (아직 안해 봄)
+        - git checkout --ours CONFLICT_FILE
+        - git checkout --theirs CONFLICT_FILE
+
+        --ours 옵션을 내것으로 바꾸는 것이고, --theirs 옵션을 사용하면 외부의 것으로 바꾸는 것이다. 이렇게 파일들을 checkout해서 충돌을 해결한 다음 커밋을 해서 merge하면 됩니다.
+
+- 강제로 브랜치것으로 바꾸기 : git reset --hard develop
+
+### 리모트와  로컬
+- remote와 local끼리 강제 집행
+    - 강제 push : git push --force
+    - 강제 pull
+	    1. git reset --hard HEAD
+	    2. git clean -f -d
+	    3. git pull
+-push한 것 되돌리기https://gmlwjd9405.github.io/2018/05/17/git-delete-incorrect-files.html
+-[리모트의 브랜치 리스트 가져오기](https://cjh5414.github.io/get-git-remote-branch/)
+- 원격리모트 브랜치 확인 : git branch -r
+- 원격리모트 브랜치 가져오기 : git remote update
+
+* 참조 : [여러상태에서 수정 이전으로 되돌리는 방법](http://hochulshin.com/git-revert-changes/)
 
 —-
 
