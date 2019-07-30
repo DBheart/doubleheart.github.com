@@ -45,6 +45,13 @@ Git의 동작원리를 이해하기 위해서는 아래 글을 읽고 보도록�
 2. clone후에 로그인아이디와 패스워드를 입력하는 방법
    1. 이게 되는지 했갈린다. 내 컴퓨터는 우선 인증을 받아놔서 말이다.
 
+
+* [깃허브 페이지 만들기](makeMyGitHubPage.md)
+* [깃 심플한 기초](https://rogerdudler.github.io/git-guide/index.ko.html)
+
+* [깃허브 프로젝트관리](https://cheese10yun.github.io/github-proejct/)
+  * 이슈와 소스와의 연결은 어떻게 하는 거지?
+  
 ---
 ## 용어
 
