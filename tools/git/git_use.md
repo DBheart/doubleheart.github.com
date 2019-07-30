@@ -102,12 +102,14 @@ master, develop, feature(작업브랜치)로 진행된다는 가정하에서 보
 >> 받는 파일이 내가 작업하지 않는 파일이어야 한다. 폴더는 겹쳐도 상관이 없다.
 
     2번 해결법 : 작업브랜치는 'feature/1'이라고 가정
-        1. git stash
+        1. git stash --all
         2. git checkout develop
         3. git pull
         4. git checkout feature/1
-        5. git stash pop
-        6. git merge develop
+        5. git merge develop
+        6. git stash pop
+
+
 
 ## 충돌에 대한 해결방법
 - merge conflict시에 일반적인 해결법 : https://blog.outsider.ne.kr/805
