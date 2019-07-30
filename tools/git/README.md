@@ -4,7 +4,7 @@
 ## 2. [Git Flow](git_flow.md)
 ## 3. [Git Tools 사용법](git_tools.md)
 ## 4. ETC
-### 4.1 *사례 : 나중에 알아보기
+### 4.1 [히스토리](git_diff.md) 알아보기
 ### 4.2 GitHub인증
 > 두가지 방법이 있다.
 1. 맥에서 사용방법
