@@ -8,7 +8,7 @@
 ## 번외 2. [Git Page 사용방법](./github/github_page.md)
 ## 번외 3. [git 레퍼런스](https://git-scm.com/book/ko/v2)
 
-* current use git ㅅㅏㄹㅖ 
+* 사용 사례
 
 ---
 
