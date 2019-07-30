@@ -117,44 +117,6 @@ master, develop, feature(작업브랜치)로 진행된다는 가정하에서 보
 git update-index --assume-unchanged 파일명
 ```
 
-## 충돌에 대한 해결방법
-- merge conflict시에 일반적인 해결법 : https://blog.outsider.ne.kr/805
-- merge할때 충돌나면 일방적으로 한쪽의 branch내용으로 바꾸기
-    - 충돌난 파일은 내것으로 바꾸기 : git merge -Xours develop
-    - 충돌난 파일은 지정된 branch로 바꾸기 : git merge -Xtheirs develop
-
-- merge 이전 파일로 되돌리기(modify 상태로 되돌리기)
-    1. 이전버전의 상태로 되돌리기 : git reset HEAD^ 파일/디렉토리
-    2. 이전버전의 파일로 되돌리기 : git checkout 파일/디렉토리
-    3. 파일의 상태를 add에서 add하기 전으로 되돌리기 : git reset 파일/디렉토리
-    - one.txt로 진행
-        - 이전버전의 상태로 되돌리기 : git reset HEAD^ one.txt
-        - 이전버전의 파일로 되돌리기 : git checkout one.txt
-        - 파일의 상태를 add에서 add하기 전으로 되돌리기 : git reset one.txt
-
-    - 추가로 merge conflict가 발생했을 때 일일이 파일을 수정하는 대신 checkout 옵션을 주어 처리할 수 있습니다.
-    (아직 안해 봄)
-        - git checkout --ours CONFLICT_FILE
-        - git checkout --theirs CONFLICT_FILE
-
-        --ours 옵션을 선택하면 merge의 기준이 되는 현재 파일로 충돌을 처리하고 --theirs 옵션을 사용하면 merge해 오는 파일을 선택하게 됩니다. 이렇게 파일들을 checkout해서 충돌을 해결한 다음 커밋을 해서 merge하면 됩니다.
-
-- remote와 local끼리 강제 집행
-    - 강제 push : git push --force
-    - 강제 pull
-	    1. git reset --hard HEAD
-	    2. git clean -f -d
-	    3. git pull
-
-- 강제로 브랜치것으로 바꾸기 : git reset --hard develop
-
-- add하기 이전 파일로 되될리기
-	- git checkout 파일/디렉토리 
-
-- 참조 : [여러상태에서 수정 이전으로 되돌리는 방법](http://hochulshin.com/git-revert-changes/)
-
-- 파일무시하기 
-	.gitignore파일을 만들어서 추가하도록 한다.
 
 
 —-
