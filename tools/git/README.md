@@ -25,6 +25,8 @@ git을 잘쓰기 위해서는 위해서는 status와 branch전략을 종합적�
 그외에 조금 약한것이 master에 태그를 다는 것인데.. 아직 경험을 해볼 기회가 없어서 하지를 못했다. tag가 다음에 개발할것하고 비교하는 단위로 쓰일것인데... 소스가 많을수록 의미가 있을까 싶기도 하다. fork까지 브랜치전략에 포함되는 버전에서 유용하지 않을까 싶기도 하고
 
 Git의 동작원리를 이해하기 위해서는 아래 글을 읽고 보도록하자.
+
+* [git simple 기초](https://rogerdudler.github.io/git-guide/index.ko.html)
 * Git 레퍼런스 
     * [git의 기본](https://git-scm.com/book/ko/v1/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-Git-%EA%B8%B0%EC%B4%88)
     * [수정하고 저장소에 저장](https://git-scm.com/book/ko/v1/Git%EC%9D%98-%EA%B8%B0%EC%B4%88-%EC%88%98%EC%A0%95%ED%95%98%EA%B3%A0-%EC%A0%80%EC%9E%A5%EC%86%8C%EC%97%90-%EC%A0%80%EC%9E%A5%ED%95%98%EA%B8%B0)
@@ -44,13 +46,6 @@ Git의 동작원리를 이해하기 위해서는 아래 글을 읽고 보도록�
 1. github에 내컴퓨터를 ssh로 접근할수 있게 등록하는 방법
 2. clone후에 로그인아이디와 패스워드를 입력하는 방법
    1. 이게 되는지 했갈린다. 내 컴퓨터는 우선 인증을 받아놔서 말이다.
-
-
-* [깃허브 페이지 만들기](makeMyGitHubPage.md)
-* [깃 심플한 기초](https://rogerdudler.github.io/git-guide/index.ko.html)
-
-* [깃허브 프로젝트관리](https://cheese10yun.github.io/github-proejct/)
-  * 이슈와 소스와의 연결은 어떻게 하는 거지?
   
 ---
 ## 용어
