@@ -109,7 +109,13 @@ master, develop, feature(작업브랜치)로 진행된다는 가정하에서 보
         5. git merge develop
         6. git stash pop
 
-
+* all 옵션을 주지 않으면 untracked라는 상태는 없어지지 않는다.
+* Stash save를 해서 환경파일을 미리 저장해 두는 방법도 있다.
+* [파일을 무시하게 하는 방법](https://blog.outsider.ne.kr/817)도 있다. 
+    * .gitignore와는 또 다르다. Assume라는 방식
+```
+git update-index --assume-unchanged 파일명
+```
 
 ## 충돌에 대한 해결방법
 - merge conflict시에 일반적인 해결법 : https://blog.outsider.ne.kr/805
