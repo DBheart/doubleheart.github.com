@@ -155,3 +155,30 @@ git update-index --assume-unchanged 파일명
 
 - 파일무시하기 
 	.gitignore파일을 만들어서 추가하도록 한다.
+
+
+—-
+
+### Assume에 대한 약간의 정리
+
+assum 
+> git update-index --assume-unchanged 파일명
+다시 변경내역에 추가하고 싶으면 다음 명령어를 사용하면 다시 git status에서 변경파일로 나옵니다. 
+
+assum cancle
+> git update-index --no-assume-unchanged 파일명 
+너무 장기간 사용하면 잊어먹을수도 있다. 
+
+assum all cancle
+아래 명령어로 워킹트리 인덱스를 갱신할수 있다.
+git update-index --really-refresh
+
+* 내가 원하는 것 같기는 한데... 다시 pull받을때는 수정되어야하는데 그런것은 안될것 같다. 
+
+
+팁 : unchanged 로 지정된 파일을 보려면 아래 명령을 실행해보세요.
+git ls-files -v | grep ^h
+> ㅇㅇ? 언체인지? assume를 말하는 거겠지?
+>> 그런것 같다.
+ > 즉, 내가 원하는 상태가 아니다.
+
