@@ -18,6 +18,7 @@
 https://username:password@github.com/username/repository.git
 ```
     - 1번과 같이 하면 임시 조치일뿐 받을때 [깃 설정변경](https://kimdoky.github.io/git/2017/05/19/git-change-passwd.html)을 바꿔야한다.
+
 ```
 기존정보를 삭제하고 다시 입력하면 된다.
 git config --unset credential.helper
