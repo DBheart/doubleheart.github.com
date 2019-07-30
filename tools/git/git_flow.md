@@ -121,3 +121,19 @@ master에서 태그를 만든후에 배포한다.
    2. QA나 사용자가 발견한 오류는 hotfixs 브랜치로 만들어서 수정후에 realse에 반영
 
 * 다시 살펴보자. realse와 hotfixes와 master, develop간의 관계가 애매하네?
+
+---
+
+
+웹에 맞는 단계
+1. Upsream은 연구소이다. 중앙 공통사항을 개발한다.
+2. 사이트에 반영하기 위해서 fork받아서 origin을 생성한다.
+3. Origin에서 clone받아서 로터리에 다운로드 받는다.
+4. 로컬 에서 기능 브랜치를 생성한다. 그리고 개발...
+5. 로컬에서 origin의 기능 브랜치에 push
+6. Origin의 develop에 fullrequest를 요청하여서 merge한다.
+    - 소스리뷰, QA를 진행
+7. 릴리즈버전으로 사용자에게 배포한다.
+    - 사용자가 발견한 오류는 hotfixs브랜치를 만들어서 수정구에 릴리즈버전에 반영
+
+* 중간에 중앙에서 수정한 사항이 있으면 origin을 통해서 develop에 반영후에 각 기능 브랜디에서 받게 한다.
