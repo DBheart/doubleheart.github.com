@@ -94,6 +94,12 @@ junit성격을 띄는 'jest'와 html내부의 element를 확인해주는 라이�
 
 * jest : junit과 비슷하다고 할수 있다.
 
+* 라이브러리 추가
+> create-react-app으로 만든것은 jest를 또 깔지 말자. 버전 충돌이 일어난다.
+```
+yarn add jest @testing-library/jest-dom @testing-library/react @types/jest axios axios-mock-adapter
+```
+
 sum.js
 ```
 function sum(a, b) {
