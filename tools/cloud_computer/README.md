@@ -27,6 +27,11 @@
     - 윈도우10의 기능이다.
     - 참조 : https://www.youtube.com/watch?v=3O6gjGZCw5o
 
+* aws에서 로그인하면 위에 루트계정으로 로그인했다고 경고가 나온다. 평소에는 하위 계정으로 접속하라는 것 같다. 
+    - aim사용법 : https://tech.cloud.nongshim.co.kr/2018/10/11/%EC%B4%88%EB%B3%B4%EC%9E%90%EB%A5%BC-%EC%9C%84%ED%95%9C-aws-%EC%9B%B9%EA%B5%AC%EC%B6%95-2-iam-%EC%9C%A0%EC%A0%80-%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0/
+* 하나의 프로젝트를 같이하기 위한 여정 : https://docs.aws.amazon.com/ko_kr/cloud9/latest/user-guide/share-environment.html
+    > 공유하면서 코딩을 하려면 shared를 해야한다. aim도 써야하고... 라는 내용 같다 
+
 ---
 
 * 구글에도 있지 않을까?
