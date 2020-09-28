@@ -30,7 +30,8 @@
 >>> Life is Simple
 
 ##스터디 포크
-	- DBheart/cloud(우리 팀들)
-	- DBheart/Interview_Question_for_Beginner(인터뷰용)
-	- DBheart/study(코딩-인터뷰용)
+- DBheart/cloud(우리 팀들)
+- DBheart/Interview_Question_for_Beginner(인터뷰용)
+- DBheart/study(코딩-인터뷰용)
+
 ### [나의 발자취](./TracesOfMe.md)
