@@ -42,7 +42,8 @@
 ##스터디 포크
 	- DBheart/cloud(우리 팀들)
 	- DBheart/Interview_Question_for_Beginner(인터뷰용)
-	- DBheart/study(코딩-인터뷰용)
+	- DBheart/study(코드 테스트용) : https://github.com/dudmy/study
+	    - 삭제
 
 ## 설명서 포크
 	- vscode-markdown-pdf : https://github.com/yzane/vscode-markdown-pdf
@@ -58,4 +59,64 @@
 
 ## 흥미 포크
 	- 달착륙 프로젝트 : https://github.com/chrislgarry/Apollo-11
+	
+---
+
+통합해야할 레파지토리들(조만간 하자고..)
+설명만 있는것은 지우도록 하자.
+포크한것중에서 내가 수정한게 없으면 그것도 지우고...
+아키, 리소스, 새일즈포스는 다시...
+
+## 나의 시도들
+    - 블로그, 각종 설명서: DBheart/blog
+
+## 합치고 버릴것들 : 7942를 버릴수 있을려나?
+1. Interview에는 패턴들에 대해서 합치자
+	- DBheart/Interview_Question_for_Beginner(인터뷰용)
+	- DBheart/javapattern
+		- 자바패턴 나름 분류
+		- 하지만 잘못되어있다. 밑에 것과 합치자
+		- 합치지 말아도 된다.. 다시 포크하던가
+		(인터뷰하고... )
+2. 주요 주제는 두가지이다. 어3개네? : 7942로 통합해야할지도...
+    1. 시큐리티(권한과 로그인 그리고 사용자)
+        - 개념
+            - DB로 사용자와 권한 관리 
+            - 기본적인 사용자와 권한은 파일관리?
+        - 자바 스프링 시큐리티로 로그인, 권한을 위한 예제  
+            - https://github.com/seti222/spring_boot_security
+    2. 통합 리소스 관리 : 의미가 없을지도 모른다. JPA
+        - 관리 리소스
+            - 파일(로컬, 서버)
+            - 시스템 : 인터페이스와 솔루션(DBMS, 기타 정보제공처들) 
+            - 소켓통신
+        - 시도 : 통합하자
+            - DBheart/myPlayingSpace
+            - DBheart/ResourceManager         
+    3. 제네레이터
+        - DB중심적인 프로그램을 일괄적으로 만들기
+            - 테이블
+            - 쿼리
+        - DBheart/SpringMVC-Spring-MyBatis
+            > https://github.com/KevinXie0131/SpringMVC-Spring-MyBatis
+            > 코드 제네레이터를 위해서 가져온 포크
+            > 몬가 잡다한것도있고.. 쓰긴 썼네           
+    4. 기타
+	    - 아래 시도했던것의 짬뽕이다(이곳에 통합하자) : DBheart/study_7942
+        - 자바를 이용한 플랫폼을 만들고 싶었다(실패) : DBheart/salesForce
+        - 메이븐으로 배포시스템 비슷한것을 만들려했던곳 : DBheart/archtype
+            - 이것도 거의 쓸모가 없지.. 합치자
+            - 설명외에는 할게 없다.
+
+	> 위 두개를 합치자.
+	
+
+
+
+
+
+
+
+
+	
 
