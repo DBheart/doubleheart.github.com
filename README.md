@@ -39,8 +39,10 @@ git push -u origin main
      -  pages 그대로 쓴다.
    -  hooks와 redux, context, mobx에 대해서 고민(2020) : https://github.com/DBheart/react_test_202001
    -  UI 라이브러리 : antD, materialUI grid, tree
-2. Git
-3. 파이썬과 장고
+2. html, css
+   - html, css, javascript 공부한 내용(2020) : https://github.com/DBheart/html_css_test_202007
+3. Git
+4. 파이썬과 장고
 
 ---
 
