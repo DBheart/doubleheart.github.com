@@ -38,11 +38,9 @@ git push -u origin main
      -  templates 그래로 쓴다.
      -  pages 그대로 쓴다.
    -  hooks와 redux, context, mobx에 대해서 고민(2020) : https://github.com/DBheart/react_test_202001
-   -  UI 라이브러리 : antD, materialUI grid, tree
 2. html, css
    - html, css, javascript 공부한 내용(2020) : https://github.com/DBheart/html_css_test_202007
 3. Git
-4. 파이썬과 장고
 
 ---
 
@@ -56,6 +54,7 @@ git push -u origin main
 4. 리액트, 프론트엔드
    - css , html5
    - 다른 프론트 엔드 : vue, Svelte
+   -  UI 라이브러리 : antD, materialUI grid, tree
 5. 파이썬과 장고 
 6. 통합 : 배포, 개발자 환경
 * 스프링은 리액트 정리되면 진행예정
