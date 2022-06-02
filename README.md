@@ -4,10 +4,27 @@
 ## React.js
 
 ---
+github와 로컬에 있는 것을 연결하는 방법(로컬에서는 이미 개발중인것)
+1. github에서 깡통 레파지토리를 만듭니다.
+2. 로컬에서 `git init`를 한후에 `git remote add origin "https://깃허브주소"`를 합니다.
+3. 로컬에서 `git branch -M main`으로 메인을 주 브랜치로 만듭니다.
+4. 로컬에서 `git push -u origin main`으로 소스를 올립니다.
+
+* 위에 것은 깡통 레파지토리를 만들면 나옵니다. 처음에는 어떻게하지 당황했는데, 깡통 레파지토리를 만들면 간단하게 해결되네요.
+
+---
 
 현재 정리
 1. React.js
+   - atomic 패턴 : 다음으로 변형해서 쓰는게 맞는것 같다. 앞에 3개는 너무 이름이 어렵다. 쉽고 많이 쓰는것으로 바꾸는게 맞는것 같다.
+     - atoms -> elements 
+     - molecules -> fields
+     - organisms -> layers
+     -  templates 그래로 쓴다.
+     -  pages 그대로 쓴다.
+   -  hooks와 redux, context, mobx에 대해서 고민(2020) : https://github.com/DBheart/react_test_202001
 2. Git
+3. 파이썬과 장고
 
 ---
 
