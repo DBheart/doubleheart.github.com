@@ -12,6 +12,21 @@ github와 로컬에 있는 것을 연결하는 방법(로컬에서는 이미 개
 
 * 위에 것은 깡통 레파지토리를 만들면 나옵니다. 처음에는 어떻게하지 당황했는데, 깡통 레파지토리를 만들면 간단하게 해결되네요.
 
+```
+echo "# html_css_test_202007" >> README.md
+git init
+git add README.md -> 'git add .'
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/DBheart/html_css_test_202007.git
+git push -u origin main
+
+## git add하기전에 .gitignore파일을 만들어서 툴관련된것을 없앤다.
+```
+
+
+
+
 ---
 
 현재 정리
